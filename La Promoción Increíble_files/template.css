@@ -1,0 +1,282 @@
+@font-face {
+	font-family: PassionOne;
+	src: url("/web/20151216145404im_/http://www.lapromocionincreible.com/fonts/PassionOne-Regular.otf") format("opentype");
+}
+
+body {
+	color: #2275BD;
+	//padding-top: 50px;
+	//background:url("/web/20151216145404im_/http://www.lapromocionincreible.com/images/fud_lapromo_background.png") top left no-repeat;
+	background-color: #C3E5FF;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-size: 20px;
+}
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+a:hover {
+	text-decoration: none !important;
+}
+
+.fud_sprite{ background:url("/web/20151216145404im_/http://www.lapromocionincreible.com/images/fud_sprite.png") top left no-repeat; display: block; overflow: hidden; text-indent: -10000px; }
+.bimbo_logo{ width:215px; height:172px; background-position:0 0; }
+.fud_logo{ width:220px; height:132px; background-position:0 -172px; margin-top: 30px; }
+.appstore_button{ width:220px; height:76px; background-position:0 -304px; }
+.googleplay_button{ width:220px; height:76px; background-position:0 -380px; }
+.share_counter {
+	background-position: 0 -456px;
+	float: left;
+	height: 40px;
+	padding-top: 6px;
+	text-align: center;
+	text-indent: 10px;
+	width: 75px;
+}
+.fb_icon{ width:26px; height:26px; background-position:-75px -456px; }
+.tw_icon{ width:27px; height:23px; background-position:-101px -456px; }
+
+.container {
+	//min-width: 480px;
+}
+.maincontainer {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 980px;
+	overflow: hidden;
+}
+.container.logor {
+	position: fixed;
+}
+
+.encabezado, .encabezado a {
+	font-family: PassionOne, arial, helvetica, sans-serif;
+	text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+	color: #19075E;
+}
+.listaventajas {
+	list-style-type: none;
+}
+.listaventajas i {
+	color: #4ABBE2;
+	margin-right: 15px;
+	margin-bottom: 22px;
+	float: left;
+}
+.listaventajas li {
+	clear: both;
+	font-size: 18px;
+}
+.nota {
+	font-size: 15px;
+}
+#myCarousel .carousel-inner .active.left { left: -33%; }
+.carousel-inner .next        { left:  33%; }
+#myCarousel .carousel-control.left, #myCarousel .carousel-control.right {background-image:none;}
+#myCarousel .col-lg-4 {width: 33%;}
+#myCarousel .carousel-inner, #myCarousel .item {
+	overflow: hidden;
+	width: 760px;
+}
+#myCarousel {
+	overflow: hidden;
+}
+
+.btn span {
+	float:left;
+	margin-right: 7px;
+	display: block;
+}
+.btn.vermas {
+	font-family: PassionOne, arial, helvetica, sans-serif;
+	font-size: 30px;
+	color: #FEFEFE;
+	background-color: #4ABBE2;
+	border-color: #4ABBE2;
+}
+.btn.twitter {
+	font-family: PassionOne, arial, helvetica, sans-serif;
+	font-size: 20px;
+	color: #4ABBE2;
+	background-color: #FEFEFE;
+	border-color: #FEFEFE;
+	text-transform: uppercase;
+	float: left;
+}
+.btn.facebook {
+	font-family: PassionOne, arial, helvetica, sans-serif;
+	font-size: 20px;
+	color: #FEFEFE;
+	background-color: #424F8C;
+	border-color: #424F8C;
+	text-transform: uppercase;
+	float: left;
+}
+.footer div {
+	font-family: PassionOne, arial, helvetica, sans-serif;
+	font-size: 20px;
+	color: #4ABBE2;
+}
+.footer div a {
+	color: #4ABBE2;
+	text-decoration: none;
+}
+.footer div a:hover {
+	text-decoration: underline;
+}
+.modal-content {
+	border: none;
+	box-shadow: none;
+	background: none;
+	//color: #FEFEFE;
+}
+.modal-title {
+	font-family: PassionOne, arial, helvetica, sans-serif;
+	font-size: 30px;
+	//color: #FEFEFE;
+	text-align: center;
+}
+.modal-header {
+	border-bottom: none;
+}
+.close {
+	opacity: 1;
+}
+.close i {
+	//color: #FEFEFE;
+	color: #2275BD;
+}
+.modal-dialog {
+	width: 90%;
+}
+.modal-body {
+	font-size: 14px;
+}
+.navbar.logos {
+}
+.modal-backdrop.in {
+	opacity: 1;
+	background:url("/web/20151216145404im_/http://www.lapromocionincreible.com/images/fud_lapromo_brillofranjas.png") top left no-repeat;
+	background-color: #C3E5FF;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.navbar.header {
+	z-index: 0;
+}
+.logos-footer {
+	text-align: right;
+}
+@media (max-width: 760px) {
+	.logos-footer, .ligas-footer {
+		text-align: center;
+	}
+}
+
+#example_video_1 {
+	width: 100% !important;
+	margin: 0 auto;
+	max-width: 540px;
+}
+
+.vjs-big-play-button {
+	left: 40% !important;
+	top: 40% !important;
+	width: 20% !important;
+	height: 20% !important;
+	font-size: 2.2em !important;
+}
+
+.sprite_2{ background:url("/web/20151216145404im_/http://www.lapromocionincreible.com/images/sprite_2.png") top left no-repeat; display: block; text-indent: -10000px; }
+.telefono:hover, .telefono.active { width:64px; height:64px; background-position:0 0; }
+.apple:hover, .apple.active { width:64px; height:64px; background-position:0 -64px; }
+.android:hover, .android.active { width:64px; height:64px; background-position:0 -128px; }
+.telefono{ width:64px; height:64px; background-position:0 -192px; }
+.apple{ width:64px; height:64px; background-position:0 -256px; }
+.android{ width:64px; height:64px; background-position:0 -320px; }
+
+.carousel-controls .carousel-indicators li {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	text-align: center;
+	text-indent: 0;
+	color: #00B7E4;
+	border-color: #00B7E4;
+	font-size: 18px;
+	font-family: PassionOne;
+	font-weight: bold;
+	border-width: 3px;
+}
+.carousel-controls .carousel-indicators li.active {
+	color: #fff;
+	background-color: #00B7E4;
+}
+
+.carousel-controls .carousel-indicators {
+	bottom: 0;
+}
+
+/* ===================AUTOCOMPLETE=======================
+   ================================================== */
+.autocomplete-suggestions {
+    overflow:auto;
+    border:1px solid #999;
+    background:#fff;
+    cursor:default
+}
+
+.autocomplete-suggestion {
+    overflow:hidden;
+    padding:10px 5px;
+    white-space:nowrap;
+    font-size:1.2em
+}
+
+.autocomplete-selected {
+    background:#f0f0f0
+}
+
+.autocomplete-suggestions strong {
+    color:#39f;
+    font-weight:400
+}
+
+/* ======================================================
+   ================================================== */
+
+#carouselMobile .item {
+	height: 90px;
+}
+
+#carouselFijo .item {
+  height: 160px;
+}
+/*
+     FILE ARCHIVED ON 14:54:04 Dec 16, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:46:13 Jan 22, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 256.248
+  exclusion.robots: 0.087
+  exclusion.robots.policy: 0.076
+  cdx.remote: 0.067
+  esindex: 0.013
+  LoadShardBlock: 220.718 (3)
+  PetaboxLoader3.datanode: 159.831 (4)
+  load_resource: 155.806
+  PetaboxLoader3.resolve: 101.988
+*/

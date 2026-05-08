@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Selector de asientos — Teatro San Jerónimo</title>
+    <meta
+      name="description"
+      content="Selector de asientos en tiempo real para Teatro San Jerónimo con Supabase."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Evento especial · Teatro San Jerónimo</p>
+          <h1 id="page-title">Selecciona tu asiento</h1>
+          <p class="hero-copy">
+            Elige un asiento disponible, confirma tus datos y tu lugar quedará bloqueado para otros
+            asistentes en tiempo real.
+          </p>
+        </div>
+        <aside class="status-card" aria-live="polite">
+          <span class="status-dot" id="connectionDot"></span>
+          <div>
+            <strong id="connectionLabel">Modo demostración</strong>
+            <small id="connectionHelp">Configura Supabase para sincronización en vivo.</small>
+          </div>
+        </aside>
+      </section>
+
+      <section class="toolbar" aria-label="Resumen de selección">
+        <div>
+          <span class="toolbar-label">Asiento seleccionado</span>
+          <strong id="selectedSeatLabel">Ninguno</strong>
+        </div>
+        <button class="primary-button" id="confirmButton" type="button" disabled>
+          Confirmar asiento
+        </button>
+      </section>
+
+      <section class="legend" aria-label="Leyenda de estados de asiento">
+        <span><i class="seat-swatch available"></i>Disponible</span>
+        <span><i class="seat-swatch selected"></i>Seleccionado</span>
+        <span><i class="seat-swatch occupied"></i>Ocupado</span>
+        <span><i class="seat-swatch wheelchair"></i>Discapacidad</span>
+      </section>
+
+      <section class="theater-card" aria-label="Mapa de asientos del Teatro San Jerónimo">
+        <div class="map-scroll">
+          <div class="theater-map" id="theaterMap"></div>
+        </div>
+        <div class="stage" aria-hidden="true">ESCENARIO</div>
+      </section>
+
+      <section class="setup-card" aria-labelledby="setup-title">
+        <h2 id="setup-title">Conexión con Supabase</h2>
+        <p>
+          Crea la tabla con <code>supabase/schema.sql</code> y coloca tus llaves públicas en
+          <code>window.SEAT_APP_CONFIG</code>. Si no se configuran, la app funciona localmente como
+          demo sin sincronización.
+        </p>
+        <pre><code>window.SEAT_APP_CONFIG = {
+  supabaseUrl: "https://TU-PROYECTO.supabase.co",
+  supabaseAnonKey: "TU_ANON_KEY"
+};</code></pre>
+      </section>
+    </main>
+
+    <dialog class="reservation-modal" id="reservationModal" aria-labelledby="modalTitle">
+      <form method="dialog" class="modal-card" id="reservationForm">
+        <button class="close-button" value="cancel" aria-label="Cerrar" type="button" id="closeModal">
+          ×
+        </button>
+        <p class="eyebrow">Confirmación de asiento</p>
+        <h2 id="modalTitle">Reserva <span id="modalSeatLabel"></span></h2>
+        <label>
+          Nombre completo
+          <input id="guestName" name="guestName" autocomplete="name" required minlength="3" />
+        </label>
+        <label>
+          Correo electrónico
+          <input id="guestEmail" name="guestEmail" type="email" autocomplete="email" required />
+        </label>
+        <p class="form-message" id="formMessage" role="status"></p>
+        <button class="primary-button" id="submitButton" type="submit">Guardar reserva</button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      window.SEAT_APP_CONFIG = window.SEAT_APP_CONFIG || {
+        supabaseUrl: "",
+        supabaseAnonKey: ""
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
